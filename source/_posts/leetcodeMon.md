@@ -10,7 +10,6 @@ categories:
 - leetcode
 ---
 
-
 {% codeblock lang:python %}
 Original Problem
 

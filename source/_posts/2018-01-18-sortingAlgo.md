@@ -116,7 +116,7 @@ def radix(nums):
 
 def populate_set(nums, i, q_set):
     for num in nums:
-        insert the num into q_set[val of num's last digit]
+        insert the num into q_set[val of num last digit]
 
 def dequeue_set(q_set):
     temp = []

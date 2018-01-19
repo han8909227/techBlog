@@ -10,9 +10,8 @@ categories:
 - leetcode
 ---
 
+** Original Problem **
 {% codeblock lang:python %}
-Original Problem
-
 # Print all edge nodes of a complete binary tree anti-clockwise.
 # That is all the left most nodes starting at root,
 # then the leaves left to right and finally all the rightmost nodes.
@@ -29,8 +28,6 @@ Original Problem
 #  /     /  \
 # 50    45  35
 # The correct solution should print 30, 10, 50, 45, 35, 20.
-
-
 {% endcodeblock %}
 
 <!--more-->

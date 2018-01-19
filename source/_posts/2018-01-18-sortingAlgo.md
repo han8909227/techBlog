@@ -5,6 +5,8 @@ tags:
 - interview
 - sorting
 - algorithms
+categories:
+- Algorithms
 ---
 
 
@@ -100,5 +102,43 @@ complexity is O(nlogn) no matter how unsorted or sorted the list is.
 **Best**: O(Nlog(N))
 
 
+## Radix Sort
+### Psudo Code
+{% codeblock lang:python %}
+def radix(nums):
+    nums = stringfy(nums)
+    max_val = len of longest number
+    q_set = [set of 10 Queues]
+    for i in range(1, len(max_val) + 1):  # range is important since we loop backward
+        populate_set(nums, i, q_set)  # for each number in list
+        nums = dequeue_set(q_set)
+    return intergerified nums
+
+def populate_set(nums, i, q_set):
+    for num in nums:
+        insert the num into q_set[val of num's last digit]
+
+def dequeue_set(q_set):
+    temp = []
+    for q in q_set:
+        for _ in range(len(q)):  # all val in single q
+            push(q.dequeue) into temp
+    return temp
+
+{% endcodeblock %}
+
+### Idea
+Radix sort employees the bin sorting approach to sort a collection of values.
+First each number we put it's digit starting the last one into a collection of queues
+which are in ordered, so we can dequeue to sort that specific digit.
+We sort from the back all the way to the front digit by digit.
+Each time we enqueue/dequue the entire list time is O(N) and since we must do the same
+operation k times, k being the length of the longest number the time complexity for
+radix sort is always O(NK) no matter what the condtion is.
+
+
+### Time Complexity
+**Worse**: O(NK)
+**Best**: O(NK)
 
 ** More Coming.... **

@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: Conceptual Questions
+title: CS Fundamental(part2 kernal)
 date: 2018-01-19 17:15:38
 tags:
 - interview

@@ -11,6 +11,7 @@ categories:
 
 
 # Sorting Algorithms
+***
 ## Bubble Sort
 ### Psudo Code
 {% codeblock lang:python %}
@@ -34,6 +35,7 @@ Worse case (reverse sorted list) will have to loop the list N times
 
 <!--more-->
 
+***
 ## Insertion Sort
 ### Psudo Code
 {% codeblock lang:python %}
@@ -56,7 +58,7 @@ the sorted plac.
 **Worse**: O(N^2)
 **Best**: O(N)
 
-
+***
 ## Merge Sort
 ### Psudo Code
 {% codeblock lang:python %}
@@ -101,7 +103,7 @@ complexity is O(nlogn) no matter how unsorted or sorted the list is.
 **Worse**: O(Nlog(N))
 **Best**: O(Nlog(N))
 
-
+***
 ## Radix Sort
 ### Psudo Code
 {% codeblock lang:python %}

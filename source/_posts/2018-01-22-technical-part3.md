@@ -41,4 +41,25 @@ Difference being SFTP is packet-based instead of text-based, and also SFTP trans
 SFTP is secured since it runs over SSH, meaning the encreption cannot be triggered or turned off using any AUTH command
 Also, SFTP contains much more details about the files such as the permissions, data, time, size, etc.
 
+## How does a Three-Way Handshake works?
+> A 3 way handshake is how TCP connection is established. As the name suggest there are 3 steps in this establishment.
+> Step 1: (SYN or Synchronize Sequence Number) When a Client wants to establish a connecction with the server, it sends a segment with SYN which informs the server with this intent and what segment number it starts segment with.
+> Step 2: (SYN + ACK) Server sends back the SYN-ACK signals to achknowledge that the above message has been received.
+> Step 3: (ACK) The final part is when the client achknowledges the response of server and they have both established a reliable connection whcih they will start sending actual data over.
 
+## What happens when I make a URL request from my web browser
+
+> The simplified version of the process looks like this:
+> 1. Browser will check for cache, if there is continue on #9
+> 2. Browser ask OS for server's IP
+> 3. OS looks up the IP address with request to DNS (Domain Name Service) and send back to the browser
+> 4. Browser initiate a TCP connection to server
+> 5. Browser sends the HTTP/ajax request through TCP connection (3 way handshake)
+> 6. Browser receives HTTP response (may or may not keep connection open)
+> 7. Browser handle the response based on the type of resopnse. i.e 200, 300, 400, or 500 type
+> 8. If the response is cachable, the response is stored in cache
+> 9. Browser parses out the response text
+> 10. Browser determine and render the response(i.e image, flash, etc)
+>
+
+## What is a peer to peer network? How does it work?

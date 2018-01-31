@@ -63,3 +63,8 @@ Also, SFTP contains much more details about the files such as the permissions, d
 >
 
 ## What is a peer to peer network? How does it work?
+
+> In traditional client-server model, your laptop is the client interacting with the server elsewhere that hosts the data you need.
+> In P2P model your laptop act as both the server and client, retriving and sending out data at the same time.
+> P2P network works by: "Peers make a portion of their resources, such as processing power, disk storage or network bandwidth, directly available to other network participants, without the need for central coordination by servers or stable hosts"
+

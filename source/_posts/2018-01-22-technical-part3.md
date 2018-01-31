@@ -68,3 +68,6 @@ Also, SFTP contains much more details about the files such as the permissions, d
 > In P2P model your laptop act as both the server and client, retriving and sending out data at the same time.
 > P2P network works by: "Peers make a portion of their resources, such as processing power, disk storage or network bandwidth, directly available to other network participants, without the need for central coordination by servers or stable hosts"
 
+
+## 5. What is scp command in Linux? What does it do?
+>In any Unix system not just Linux, SCP command is used to copy data securely between remote hosts without initiate an FTP session or logging into the remote host explicitly, using SSH protocol.

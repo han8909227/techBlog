@@ -37,6 +37,7 @@ categories:
 
 
 {% endcodeblock %}
+<!--more-->
 
 ## Approach
 This is a classic Google interview probem, and frequently used in user-orientied application implementations.

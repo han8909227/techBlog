@@ -81,8 +81,6 @@ https://leetcode.com/problems/jump-game/
 
 {% endcodeblock %}
 
-<!--more-->
-
 ## Approach
 Similar to the last problem, in this one we want to not only find out whether we can reach the end with the jumps but also return the minimum number of jump we could take. Simply put, we just got more greedy!
 To approach this we would have to keep track of:
@@ -107,3 +105,56 @@ def jump_game_ii(nums):
         reach = max(reach, nums[i] + i)  # determine what reach is for this i, either previous reach or curr val + idx
     return counter
 {% endcodeblock %}
+
+https://leetcode.com/problems/jump-game-ii/
+
+
+# Leetcode 121 Best time to buy stock
+
+## Original Problem
+
+{% codeblock lang:python %}
+
+# Say you have an array for which the ith element is the price of a given stock on day i.
+
+# If you were only permitted to complete at most one transaction (ie, buy one and sell one share of the stock), design an algorithm to find the maximum profit.
+
+# Example 1:
+# Input: [7, 1, 5, 3, 6, 4]
+# Output: 5
+
+# max. difference = 6-1 = 5 (not 7-1 = 6, as selling price needs to be larger than buying price)
+# Example 2:
+# Input: [7, 6, 4, 3, 1]
+# Output: 0
+
+# In this case, no transaction is done, i.e. max profit = 0.
+
+{% endcodeblock %}
+
+
+## Approach
+Simple and straight-forward problem, as we iterate through the list we just need to keep track of:
+- the minimum price we can buy
+- the maximum profit we will receive if we sell the holding stock with the current price
+- update min price if there is a lower price in the list
+- update max profit if we can make a better profit from any of the stock val
+
+## Implementation
+
+{% codeblock lang:python %}
+
+def stock_profit(nums):
+    """Also another greedy algo problem."""
+    max_profit = 0
+    min_price = nums[0]
+    for price in nums:
+        if price < min_price:
+            min_price = price
+        if price - min_price > max_profit:
+            max_profit = price - min_price
+    return max_profit
+
+{% endcodeblock %}
+
+https://leetcode.com/problems/best-time-to-buy-and-sell-stock/

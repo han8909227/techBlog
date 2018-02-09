@@ -9,7 +9,6 @@ categories:
 ---
 
 # Leetcode 55 Jump Game
-
 ## Original Problem
 
 {% codeblock lang:python %}
@@ -60,7 +59,6 @@ https://leetcode.com/problems/jump-game/
 
 
 # Leetcode 45 Jump Game II
-
 ## Original Problem
 
 {% codeblock lang:python %}
@@ -110,7 +108,6 @@ https://leetcode.com/problems/jump-game-ii/
 
 
 # Leetcode 121 Best time to buy stock
-
 ## Original Problem
 
 {% codeblock lang:python %}
@@ -131,7 +128,6 @@ https://leetcode.com/problems/jump-game-ii/
 # In this case, no transaction is done, i.e. max profit = 0.
 
 {% endcodeblock %}
-
 
 ## Approach
 Simple and straight-forward problem, as we iterate through the list we just need to keep track of:
@@ -158,3 +154,46 @@ def stock_profit(nums):
 {% endcodeblock %}
 
 https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+
+
+# Leetcode 122 Best time to buy stock II
+## Original Problem
+
+{% codeblock lang:python %}
+
+# Say you have an array for which the ith element is the price of a given stock on day i.
+
+# Design an algorithm to find the maximum profit. You may complete as many transactions as you like (ie, buy one and sell one share of the stock multiple times). However,
+# you may not engage in multiple transactions at the same time (ie, you must sell the stock before you buy again).
+
+{% endcodeblock %}
+
+## Approach
+Ok now we can sell stock multiple times throughout the course of the list, but only can hold one stock at a time.
+We can approach this by think of our actions as we iterate through the stock prices, instead of finding the buy-in and buy-out pair that wold give us max profit. Each time we iterated on a price, we should either sell or buy a stock.
+This way we can ensure to make max profit throughout our investment journey.
+
+
+## Implementation
+
+{% codeblock lang:python %}
+
+def maxProfit(self, prices):
+    """
+    :type prices: List[int]
+    :rtype: int
+    """
+    if not prices:
+        return 0
+    low = high = prices[0]
+    profit = 0
+    for i in range(1, len(prices)):
+        if prices[i] >= prices[i - 1]:
+            high = prices[i]
+        else:
+            profit += high - low
+            low = high = prices[i]
+    profit += high - low
+    return profit
+{% endcodeblock %}
+

@@ -92,7 +92,7 @@ https://leetcode.com/problems/linked-list-cycle/description/
 ## Approach
 Similarly we can use two pointers to detect a cycle in a linked list. Let's first break down where they might meet.
 ![alt text](https://shenjie1993.gitbooks.io/leetcode-python/linked-list-cycle.png)
-A=head B=node cycle starts(target) C=somewhere in the cycle
+A=head      B=node cycle starts(target)      C=somewhere in the cycle
 If we use the same approach in the last problem, where both pointers start at A they will meet at C since the second pointer is twice as fast.
 The slower pointer traverled x+y while faster pointer traverled x+y+z+y, and since we know faster pointer is twice as fast: x+y+z+y=2(x+y), meaning x=z.
 At this pointer both ponter will be at C, meaning if we start another pointer from the head to traverl to B(x distance), the time it takes for the pointer at C to get to B will be the same(z distance) since we know x=z.
